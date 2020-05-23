@@ -1,17 +1,17 @@
-//ƒCƒ“ƒNƒ‹[ƒh
+ï»¿//ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 #include "exec_ini_Reader.h"
 #include "../MyLib/get_program_path/get_program_path.h"
 
 #include <iostream>
 
-//’è”éŒ¾
-//ƒRƒƒ“ƒgs
+//å®šæ•°å®£è¨€
+//ã‚³ãƒ¡ãƒ³ãƒˆè¡Œ
 static const char COMMENT_PREFIX = '#';
-//‹æØ‚è•¶š
+//åŒºåˆ‡ã‚Šæ–‡å­—
 static const char SEPARATOR = '=';
-//ƒgƒŠƒ€•¶š
+//ãƒˆãƒªãƒ æ–‡å­—
 static const std::string TRIM = {' ', '\t'};
-//ƒvƒƒpƒeƒB
+//ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
 namespace PROPERTIES {
 	static const std::string PROGRAM_FILE_PATH = "programFile";
 }

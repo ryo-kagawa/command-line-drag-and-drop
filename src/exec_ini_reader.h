@@ -1,17 +1,17 @@
-#pragma once
+ï»¿#pragma once
 
-//ƒCƒ“ƒNƒ‹[ƒh
+//ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 #include "../MyLib/ini_reader/ini_reader.h"
 
 #include <string>
 
 class exec_ini_Reader {
 public:
-	//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	exec_ini_Reader();
-	//ƒtƒ@ƒCƒ‹–¼‚Ìæ“¾
+	//ãƒ•ã‚¡ã‚¤ãƒ«åã®å–å¾—
 	const std::string getProgramFilePath() const;
 private:
-	//iniƒtƒ@ƒCƒ‹“Ç‚İ‚İ
+	//iniãƒ•ã‚¡ã‚¤ãƒ«èª­ã¿è¾¼ã¿
 	ini_reader iniReader;
 };

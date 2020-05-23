@@ -1,22 +1,20 @@
-//ƒCƒ“ƒNƒ‹[ƒh
+ï»¿//ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 #include "exec_ini_Reader.h"
 
-#include <cstdlib>
 #include <conio.h>
-#include <algorithm>
-#include <filesystem>
-#include <iostream>
+#include <codecvt>
+#include <string>
 
-//ƒƒCƒ“ŠÖ”
-int main(const int argc, const char *argv[]) {
+//ãƒ¡ã‚¤ãƒ³é–¢æ•°
+int wmain(const int argc, const wchar_t *argv[]) {
 	const exec_ini_Reader IniReader = exec_ini_Reader();
 	std::string command = IniReader.getProgramFilePath();
+	std::wstring command2 = std::wstring_convert<std::codecvt_utf8<wchar_t>>().from_bytes(command);
 	for(int i=1; i<argc; ++i) {
-		command += " \"" + std::string(argv[i]) + "\"";
+		std::wstring temp(argv[i]);
+		command2 += L" \"" + temp + L"\"";
 	}
-	system(command.c_str());
+	_wsystem(command2.c_str());
 
-	_getch();
-	_kbhit();
 	return EXIT_SUCCESS;
 }
